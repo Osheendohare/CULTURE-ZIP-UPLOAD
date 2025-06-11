@@ -1,3 +1,6 @@
 "culture_db.sql" 
 "*.sql" 
 "*.json" 
+
+# Ignore user-uploaded comment files
+CULTURE/culture_project/media/comments_files/
