@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Indian Cultural Heritage</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'culture/contact.css' %}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+    <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'culture_page' %}">About Cultural Heritage</a></li>
+            <li><a href="{% url 'festivals' %}">Festivals</a></li>
+            <li><a href="{% url 'art-craft' %}">Art-Craft</a></li>
+            <li><a href="{% url 'music-dance' %}">Music & Dance</a></li>
+            <li><a href="{% url 'cuisine' %}">Cuisine</a></li>
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+    </nav>    
+
+    <!-- Contact Section -->
+     <section class="contact-section">
+    <h2>Get in Touch</h2>
+    <h3 id="greeting"></h3>
+
+    <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <form method="post" action="{% url 'contact' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Success Message -->
+        {% if messages %}
+        <div class="message-box">
+            {% for message in messages %}
+                <p style="color: green;">{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Submitted Info -->
+        {% if name and email and message %}
+        <div class="submitted-data">
+            <h3>Submission Details:</h3>
+            <p><strong>Name:</strong> {{ name }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+            <p><strong>Message:</strong> {{ message }}</p>
+        </div>
+        {% endif %}
+
+        <!-- Static Contact Info -->
+        <div class="contact-details">
+            <h3>Contact Info</h3>
+            <p><strong>Email:</strong> info@indianculturalheritage.com</p>
+            <p><strong>Phone:</strong> +91 123 456 7890</p>
+            <p><strong>Address:</strong> 123 Cultural St, New Delhi, India</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Indian Cultural Heritage. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"><img src="{% static 'culture/./images/fb.png'%}" alt="Facebook"></a>
+                <a href="https://www.twitter.com/" target="_blank"><img src="{% static 'culture/./images/twitter.png'%}" alt="Twitter"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'culture/./images/insta.png'%}" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'culture/contact.js'%}"></script>
+</body>
+</html>
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture | Indian Cultural Heritage</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'culture/culture.css'%}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="culture-hero">
+        <div class="hero-content">
+            <h1>Indian Culture</h1>
+            <p>Explore the diverse and vibrant traditions that define the soul of India.</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'culture_page' %}">About Cultural Heritage</a></li>
+            <li><a href="{% url 'festivals' %}">Festivals</a></li>
+            <li><a href="{% url 'art-craft' %}">Art-Craft</a></li>
+            <li><a href="{% url 'music-dance' %}">Music & Dance</a></li>
+            <li><a href="{% url 'cuisine' %}">Cuisine</a></li>
+            <!-- <li><a href="quiz.html">Quiz Zone</a></li> -->
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Traditions Section -->
+    <section class="traditions">
+        <h2>Traditions and Customs</h2>
+        <div class="content-grid">
+            <div class="content-item">
+                <img src="{% static 'culture/./images/Traditions.png'%}" alt="Indian Traditions">
+                <p>Indian culture is deeply rooted in traditions and customs that have been passed down through generations. From family values to community celebrations, these traditions are an integral part of daily life in India.</p>
+            </div>
+            <div class="content-item">
+                <img src="{% static 'culture/./images/customs.png'%}" alt="Indian Customs">
+                <p>Respect for elders, hospitality towards guests, and diverse religious practices are key elements of Indian customs. Festivals, rituals, and ceremonies add color and joy to everyday life.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditional Attire Section -->
+    <section class="attire">
+        <h2>Traditional Attire</h2>
+        <div class="content-grid">
+            <div class="content-item">
+                <img src="{% static 'culture/./images/saree.png'%}" alt="Traditional Sari">
+                <p>The sari is one of the most iconic garments in India, symbolizing grace and elegance. Each region has its unique style, fabric, and draping method, reflecting the rich textile heritage of the country.</p>
+            </div>
+            <div class="content-item">
+                <img src="{% static 'culture/./images/turbon.png'%}" alt="Traditional Turban">
+                <p>The turban, worn by men in various parts of India, is not just a piece of cloth but a symbol of pride, honor, and tradition. It varies in style and significance across different cultures and regions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Language Diversity Section -->
+    <section class="languages">
+        <h2>Languages of India</h2>
+        <div class="content-grid">
+            <div class="content-item">
+                <img src="{% static 'culture/./images/hindi.png'%}" alt="Hindi Language">
+                <p>Hindi is one of the most widely spoken languages in India and the fourth most spoken language in the world.</p>
+            </div>
+            <div class="content-item">
+                <img src="{% static 'culture/./images/tamil.png'%}" alt="Tamil Language">
+                <p>Tamil (தமிழ், Tamil) is one of the oldest and most classical languages in the world, with a history spanning over 2,000 years.</p>
+            </div>
+            <div class="content-item">
+                <img src="{% static 'culture/./images/bengali.png'%}" alt="Bengali Language">
+                <p>Bengali (বাংলা, Bangla) is one of the most widely spoken languages in the world and holds a prominent place in the linguistic and cultural identity of India and Bangladesh</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Art and Crafts Section -->
+    <section class="art-crafts">
+        <h2>Art and Crafts</h2>
+        <div class="content-grid">
+            <div class="content-item">
+                <img src="{% static 'culture/./images/arts.png'%}" alt="Indian Art">
+                <p>Indian art is known for its intricate designs, vibrant colors, and historical significance. From ancient murals to modern paintings, Indian art continues to inspire and captivate audiences worldwide.</p>
+            </div>
+            <div class="content-item">
+                <img src="{% static 'culture/./images/craft.png'%}" alt="Indian Crafts">
+                <p>Crafts such as pottery, weaving, and metalwork reflect the skills and creativity of Indian artisans. These crafts are not just a source of livelihood but also a way of preserving cultural heritage.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Indian Cultural Heritage. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"><img src="{% static 'culture/./images/fb.png'%}" alt="Facebook"></a>
+                <a href="https://www.twitter.com/" target="_blank"><img src="{% static 'culture/./images/twitter.png'%}" alt="Twitter"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'culture/./images/insta.png'%}" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

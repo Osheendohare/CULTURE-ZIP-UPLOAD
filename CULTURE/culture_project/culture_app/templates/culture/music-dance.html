@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music & Dance | Indian Cultural Heritage</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'culture/music-dance.css'%}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'culture_page' %}">About Cultural Heritage</a></li>
+            <li><a href="{% url 'festivals' %}">Festivals</a></li>
+            <li><a href="{% url 'art-craft' %}">Art-Craft</a></li>
+            <li><a href="{% url 'music-dance' %}">Music & Dance</a></li>
+            <li><a href="{% url 'cuisine' %}">Cuisine</a></li>
+            <!-- <li><a href="quiz.html">Quiz Zone</a></li> -->
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Music & Dance Section -->
+    <section class="music-dance-section">
+        <h2>Classical and Folk Music & Dance of India</h2>
+        <div class="music-dance-grid">
+            <div class="music-dance-item">
+                <img src="{% static 'culture/./images/bharatyanatyam.png'%}" alt="Bharatanatyam Dance">
+                <h3>Bharatanatyam</h3>
+                <p>Bharatanatyam is a classical dance form originating from Tamil Nadu, known for its grace, expressions, and intricate footwork.</p>
+            </div>
+            <div class="music-dance-item">
+                <img src="{% static 'culture/./images/kathak.png'%}" alt="Kathak Dance">
+                <h3>Kathak</h3>
+                <p>Kathak is a classical dance form from North India, characterized by intricate footwork, spins, and expressive storytelling.</p>
+            </div>
+            <div class="music-dance-item">
+                <img src="{% static 'culture/./images/sitar.png'%}" alt="Sitar Music">
+                <h3>Sitar</h3>
+                <p>The sitar is a stringed instrument widely used in Indian classical music, known for its melodic and resonant sound.</p>
+            </div>
+            <div class="music-dance-item">
+                <img src="{% static 'culture/./images/bhangra.png'%}" alt="Bhangra Dance">
+                <h3>Bhangra</h3>
+                <p>Bhangra is a lively folk dance from Punjab, performed to the energetic beats of the dhol, celebrating joy and harvest.</p>
+            </div>
+            <div class="music-dance-item">
+                <img src="{% static 'culture/./images/tabla.png'%}" alt="Tabla">
+                <h3>Tabla</h3>
+                <p>The tabla is a pair of drums used in Hindustani classical music, known for its complex rhythms and versatile sound.</p>
+            </div>
+            <div class="music-dance-item">
+                <img src="{% static 'culture/./images/odissi.png'%}" alt="Odissi Dance">
+                <h3>Odissi</h3>
+                <p>Odissi is one of the oldest classical dance forms from Odisha, characterized by its fluid movements, sculpturesque poses, and emotive expressions.</p>
+            </div>
+            <div class="music-dance-item">
+                <img src="{% static 'culture/./images/bihu.png'%}" alt="Bihu">
+                <h3>Bihu</h3>
+                <p>Bihu is a vibrant and joyous festival celebrated in the northeastern state of Assam, India. It marks the Assamese New Year and is closely associated with agriculture, especially the harvest season.</p>
+            </div>
+            <div class="music-dance-item">
+                <img src="{% static 'culture/./images/kirtan.png'%}" alt="Keerthan">
+                <h3>Keerthana</h3>
+                <p>Keerthana (also spelled Kirtana or Keertana) is a form of devotional music in Carnatic music tradition, primarily sung in praise of gods and goddesses in South India.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Indian Cultural Heritage. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"><img src="{% static 'culture/./images/fb.png'%}" alt="Facebook"></a>
+                <a href="https://www.twitter.com/" target="_blank"><img src="{% static 'culture/./images/twitter.png'%}" alt="Twitter"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'culture/./images/insta.png'%}" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

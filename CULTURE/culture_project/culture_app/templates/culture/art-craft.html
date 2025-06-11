@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art & Craft | Indian Cultural Heritage</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'culture/art-craft.css'%}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'culture_page' %}">About Cultural Heritage</a></li>
+            <li><a href="{% url 'festivals' %}">Festivals</a></li>
+            <li><a href="{% url 'art-craft' %}">Art-Craft</a></li>
+            <li><a href="{% url 'music-dance' %}">Music & Dance</a></li>
+            <li><a href="{% url 'cuisine' %}">Cuisine</a></li>
+            <!-- <li><a href="quiz.html">Quiz Zone</a></li> -->
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Art & Craft Section -->
+    <section class="art-craft-section">
+        <h2>Traditional Art & Craft of India</h2>
+        <div class="art-craft-grid">
+            <div class="art-craft-item">
+                <img src="{% static 'culture/./images/madhubani.png'%}" alt="Madhubani Painting">
+                <h3>Madhubani Painting</h3>
+                <p>Madhubani is a traditional folk art form from Bihar, characterized by intricate patterns and vibrant colors depicting nature, mythology, and folklore.</p>
+            </div>
+            <div class="art-craft-item">
+                <img src="{% static 'culture/./images/warli.png'%}" alt="Warli Art">
+                <h3>Warli Art</h3>
+                <p>Warli art, originating from Maharashtra, uses simple geometric shapes to depict the daily life of the Warli tribe, celebrated for its simplicity and storytelling.</p>
+            </div>
+            <div class="art-craft-item">
+                <img src="{% static 'culture/./images/pattachitra.png'%}" alt="Pattachitra Painting">
+                <h3>Pattachitra</h3>
+                <p>Pattachitra is a traditional painting style from Odisha and West Bengal, known for its intricate details, mythological themes, and vibrant colors.</p>
+            </div>
+            <div class="art-craft-item">
+                <img src="{% static 'culture/./images/terracotta.png'%}" alt="Terracotta Pottery">
+                <h3>Terracotta Pottery</h3>
+                <p>Terracotta pottery is one of the oldest crafts of India, showcasing the skilled use of natural clay to create beautiful and functional pieces.</p>
+            </div>
+            <div class="art-craft-item">
+                <img src="{% static 'culture/./images/embroiddery.png'%}" alt="Embroidery">
+                <h3>Traditional Embroidery</h3>
+                <p>Embroidery styles like Zardozi, Kantha, and Phulkari reflect India’s rich tradition of needlework, often used in clothing, home decor, and art.</p>
+            </div>
+            <div class="art-craft-item">
+                <img src="{% static 'culture/./images/wood.png'%}" alt="Wood Carving">
+                <h3>Wood Carving</h3>
+                <p>Wood carving is an ancient craft of India, producing intricately designed furniture, sculptures, and decor items that reflect the artistry of different regions.</p>
+            </div>
+            <div class="art-craft-item">
+                <img src="{% static 'culture/./images/tanjore.png'%}" alt="Tanjore Painting">
+                <h3>Tanjore Painting</h3>
+                <p>Tanjore Painting is a classical South Indian art form that originated in the town of Thanjavur (Tamil Nadu) during the 16th century under the rule of the Nayakas and Marathas.</p>
+            </div>
+            <div class="art-craft-item">
+                <img src="{% static 'culture/./images/miniature.png'%}" alt="Miniature Painting">
+                <h3>Miniature Painting</h3>
+                <p>Miniature Painting is a highly detailed, small-scale art form that originated in India during the medieval period, flourishing under the Mughal Empire and later in Rajput, Pahari, and Deccan schools of art.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Indian Cultural Heritage. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"><img src="{% static 'culture/./images/fb.png'%}" alt="Facebook"></a>
+                <a href="https://www.twitter.com/" target="_blank"><img src="{% static 'culture/./images/twitter.png'%}" alt="Twitter"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'culture/./images/insta.png'%}" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuisine | Indian Cultural Heritage</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'culture/cuisine.css'%}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'culture_page' %}">About Cultural Heritage</a></li>
+            <li><a href="{% url 'festivals' %}">Festivals</a></li>
+            <li><a href="{% url 'art-craft' %}">Art-Craft</a></li>
+            <li><a href="{% url 'music-dance' %}">Music & Dance</a></li>
+            <li><a href="{% url 'cuisine' %}">Cuisine</a></li>
+            <!-- <li><a href="quiz.html">Quiz Zone</a></li> -->
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cuisine Section -->
+    <section class="cuisine-section">
+        <h2>Traditional Indian Cuisine</h2>
+        <div class="cuisine-grid">
+            <div class="cuisine-item">
+                <img src="{% static 'culture/./images/biryani.png'%}" alt="Biryani">
+                <h3>Biryani</h3>
+                <p>Biryani is a flavorful rice dish made with aromatic spices, herbs, and marinated meat or vegetables, popular across India with regional variations.</p>
+            </div>
+            <div class="cuisine-item">
+                <img src="{% static 'culture/./images/dosa.png'%}" alt="Masala Dosa">
+                <h3>Masala Dosa</h3>
+                <p>Masala Dosa is a famous South Indian dish consisting of a crispy rice crepe filled with spicy potato masala, served with coconut chutney and sambar.</p>
+            </div>
+            <div class="cuisine-item">
+                <img src="{% static 'culture/./images/butter.png'%}" alt="Butter Chicken">
+                <h3>Butter Chicken</h3>
+                <p>Butter Chicken is a rich, creamy, and mildly spiced curry made with marinated chicken cooked in a tomato-based gravy, known for its velvety texture.</p>
+            </div>
+            <div class="cuisine-item">
+                <img src="{% static 'culture/./images/gujrati.png'%}" alt="Gujarati Thali">
+                <h3>Gujarati Thali</h3>
+                <p>Gujarati Thali offers a variety of vegetarian dishes, including curries, dals, sweets, and pickles, served together on a single platter.</p>
+            </div>
+            <div class="cuisine-item">
+                <img src="{% static 'culture/./images/rogan.png'%}" alt="Rogan Josh">
+                <h3>Rogan Josh</h3>
+                <p>Rogan Josh is a fragrant and flavorful Kashmiri curry made with tender pieces of lamb, cooked in a rich sauce of yogurt, garlic, and aromatic spices.</p>
+            </div>
+            <div class="cuisine-item">
+                <img src="{% static 'culture/./images/jalebi.png'%}" alt="Jalebi">
+                <h3>Jalebi</h3>
+                <p>Jalebi is a popular Indian dessert made of deep-fried, crispy spirals soaked in sugar syrup, enjoyed for its sweet and tangy taste.</p>
+            </div>
+            <div class="cuisine-item">
+                <img src="{% static 'culture/./images/idli.png'%}" alt="Idli">
+                <h3>Idli Sambhar</h3>
+                <p>Idli Sambar is a popular South Indian dish that is widely loved across India and even internationally. It consists of two main components: Idli and Sambar, often served with chutneys.</p>
+            </div>
+            <div class="cuisine-item">
+                <img src="{% static 'culture/./images/dal.png'%}" alt="Dal">
+                <h3>Dal Chawal</h3>
+                <p>Dal Chawal is a simple, comforting, and nutritious Indian meal consisting of dal (lentil curry) and chawal (steamed rice). </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Indian Cultural Heritage. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"><img src="{% static 'culture/./images/fb.png'%}" alt="Facebook"></a>
+                <a href="https://www.twitter.com/" target="_blank"><img src="{% static 'culture/./images/twitter.png'%}" alt="Twitter"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'culture/./images/insta.png'%}" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festivals | Indian Cultural Heritage</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'culture/festivals.css'%}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'culture_page' %}">About Cultural Heritage</a></li>
+            <li><a href="{% url 'festivals' %}">Festivals</a></li>
+            <li><a href="{% url 'art-craft' %}">Art-Craft</a></li>
+            <li><a href="{% url 'music-dance' %}">Music & Dance</a></li>
+            <li><a href="{% url 'cuisine' %}">Cuisine</a></li>
+            <!-- <li><a href="quiz.html">Quiz Zone</a></li> -->
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Festivals Section -->
+    <section class="festivals-section">
+        <h2>Major Festivals of India</h2>
+        <div class="festival-grid">
+            <div class="festival-item">
+                <img src="{% static 'culture/./images/diwali.png'%}" alt="Diwali">
+                <h3>Diwali</h3>
+                <p>Known as the Festival of Lights, Diwali symbolizes the victory of light over darkness, good over evil, and hope over despair.</p>
+            </div>
+            <div class="festival-item">
+                <img src="{% static 'culture/./images/holi.png'%}" alt="Holi Festival">
+                <h3>Holi</h3>
+                <p>Holi, the Festival of Colors, marks the arrival of spring and the victory of good over evil. It is celebrated with joy, colors, and dance.</p>
+            </div>
+            <div class="festival-item">
+                <img src="{% static 'culture/./images/eid.png'%}" alt="Eid Festival">
+                <h3>Eid</h3>
+                <p>Eid is a significant Islamic festival that marks the end of Ramadan. It is celebrated with prayers, feasts, and a spirit of brotherhood.</p>
+            </div>
+            <div class="festival-item">
+                <img src="{% static 'culture/./images/christmas.png'%}" alt="Christmas Festival">
+                <h3>Christmas</h3>
+                <p>Christmas celebrates the birth of Jesus Christ. It is a time of joy, gift-giving, and sharing love with friends and family.</p>
+            </div>
+            <div class="festival-item">
+                <img src="{% static 'culture/./images/navratri.png'%}" alt="Navratri Festival">
+                <h3>Navratri</h3>
+                <p>Navratri is a nine-night festival dedicated to Goddess Durga. It is celebrated with dance, music, and devotion across India.</p>
+            </div>
+            <div class="festival-item">
+                <img src="{% static 'culture/./images/pongal.png'%}" alt="Pongal Festival">
+                <h3>Pongal</h3>
+                <p>Pongal is a harvest festival celebrated in Tamil Nadu. It is a thanksgiving to the Sun God for agricultural abundance.</p>
+            </div>
+            <div class="festival-item">
+                <img src="{% static 'culture/./images/rakhi.png'%}" alt="Rakhi Festival">
+                <h3>Raksha Bandhan</h3>
+                <p>Raksha Bandhan is a traditional festival celebrating the bond between brothers and sisters, where sisters tie a thread on brothers wrist. </p>
+            </div>
+            <div class="festival-item">
+                <img src="{% static 'culture/./images/lastfest.png'%}" alt="Sankrant Festival">
+                <h3>Makar Sankranti</h3>
+                <p> Makar Sankranti is Hindu festival celebrated on 14 january.It symbolizes the beginning of longer days and harvest season.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Indian Cultural Heritage. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"><img src="{% static 'culture/./images/fb.png'%}" alt="Facebook"></a>
+                <a href="https://www.twitter.com/" target="_blank"><img src="{% static 'culture/./images/twitter.png'%}" alt="Twitter"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'culture/./images/insta.png'%}" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

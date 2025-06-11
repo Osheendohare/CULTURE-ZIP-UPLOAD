@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Cultural Heritage</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'culture/styles.css'%}">
+    <script src="{% static 'culture/scripts.js'%}"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="carousel-container">
+            <button id="prev" class="carousel-btn">❮</button>
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    <img src="{% static 'culture/./images/WhatsApp Image 2024-12-15 at 12.43.49 AM.jpeg'%}" />
+                    <img src="{% static 'culture/./images/fp2.png'%}" />
+                    <img src="{% static 'culture/./images/fp3.png'%}" />
+                    <img src="{% static 'culture/./images/fp4.png'%}" />
+                    <img src="{% static 'culture/./images/f5.png'%}" />
+                </div>
+            </div>
+            <button id="next" class="carousel-btn">❯</button>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'culture_page' %}">About Cultural Heritage</a></li>
+            <li><a href="{% url 'festivals' %}">Festivals</a></li>
+            <li><a href="{% url 'art-craft' %}">Art-Craft</a></li>
+            <li><a href="{% url 'music-dance' %}">Music & Dance</a></li>
+            <li><a href="{% url 'cuisine' %}">Cuisine</a></li>
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Cultural Highlights Section -->
+        <br>
+        <section class="highlights">
+            <h2>Cultural Highlights</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="{% static 'culture/images/1.jpeg' %}" alt="Diwali Festival">
+                    <h3>Festivals</h3>
+                    <p>Experience the colorful festivals of India, from Diwali to Holi.</p>
+                    <a href="{% url 'festivals' %}"><button class="read-more-button">Read More</button></a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'culture/images/2.jpeg' %}" alt="Classical Dance">
+                    <h3>Dance</h3>
+                    <p>Explore the classical dance forms like Bharatanatyam and Kathak.</p>
+                    <a href="{% url 'music-dance' %}"><button class="read-more-button">Read More</button></a>
+                </div>
+                <div class="card">
+                    <img src="{% static 'culture/images/3.jpeg' %}" alt="Indian Cuisine">
+                    <h3>Cuisine</h3>
+                    <p>Indulge in the diverse and flavorful Indian cuisine.</p>
+                    <a href="{% url 'cuisine' %}"><button class="read-more-button">Read More</button></a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </section>
+
+        <!-- About Indian Culture Section -->
+        <section class="about-culture">
+            <h2>About Indian Culture</h2>
+            <p>India is a land of rich traditions, ancient history, and vibrant cultures. From the majestic temples of the South to the colorful bazaars of the North, Indian culture is a tapestry of art, music, dance, and spirituality that has evolved over thousands of years.</p>
+            <p>Whether it’s the intricate carvings of its historic monuments, the soulful ragas of its classical music, or the spicy flavors of its diverse cuisine, India's cultural heritage is a treasure trove waiting to be explored.</p>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <img src="{% static 'culture/./images/mon.png' %}" alt="Indian Monument">
+                <img src="{% static 'culture/./images/dance.png' %}" alt="Traditional Indian Dance">
+                <img src="{% static 'culture/./images/fest.png' %}" alt="Indian Festival">
+                <img src="{% static 'culture/./images/art.png' %}" alt="Indian Art">
+            </div>
+        </section>
+
+        <!-- Comment Section -->
+        <section class="comment-section">
+            <h2>Comment Section</h2>
+            <form class="comment-form" method="POST" action="{% url 'post_comment' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <textarea name="message" placeholder="Write your experience..." required></textarea>
+    <span id="charCount">0/300</span>
+    <input type="file" name="file" accept="image/*">
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+  const textarea = document.getElementById('commentText') || document.querySelector('textarea[name="message"]');
+  const charCount = document.getElementById('charCount');
+
+  if (textarea && charCount) {
+    textarea.addEventListener('input', () => {
+      charCount.textContent = `${textarea.value.length}/300`;
+    });
+  }
+</script>   
+
+<div id="commentsContainer" class="comments-container">
+    <h2>Previous Comments</h2>
+    {% for comment in comments %}
+    <div class="comment-entry">
+        <p class="comment-text">{{ comment.message }}</p>
+        {% if comment.file %}
+    <a class="comment-file" href="{{ comment.file.url }}" download>Download Attachment</a>
+  {% endif %}
+  <small class="comment-timestamp">{{ comment.timestamp }}</small>
+  <hr class="comment-divider">
+  </div>
+{% endfor %}
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Indian Cultural Heritage. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"><img src="{% static 'culture/./images/fb.png'%}" alt="Facebook"></a>
+                <a href="https://www.twitter.com/" target="_blank"><img src="{% static 'culture/./images/twitter.png'%}" alt="Twitter"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'culture/./images/insta.png'%}" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    </script>
+    <script src="{% static 'culture/scripts.js'%}"></script>
+</body>
+</html>
